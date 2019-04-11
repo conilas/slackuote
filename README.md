@@ -1,6 +1,8 @@
-# Shitty-men
+# Slackuote 
 
-Stupid in every level: uses Mongo, Express and Node to create a rest api. Even a 11 year old can do this. But we do it and... we make some money.
+### Slack-bot integration for some good inspirational quotes (or unpopular opinions) :-) 
+
+This repository contains the code for an application that receives quotes from slack and shows them on the screen in a pretty way. The whole idea is to store all the good quotes and look back saying 'oh, the good'ol days!'. 
 
 ## About the configurations
 
@@ -17,14 +19,11 @@ module.exports = Object.freeze({
 
 ### Server 
 
-If you need to make changes to the binded IP of the server (although it binds currently to 0.0.0.0, which will work on every network interface you have) or to the port, see <code>server.js</code> in the main directory. 
-
-You will find the following (at line ~17):
+If you need to make changes to the binded IP of the server (although it binds currently to 0.0.0.0, which will work on every network interface you have) or to the port, see 
 
 ```javascript
 const port = process.env.PORT || 8080; // set our port
 ```
-That is where you may change the default port. You can also pass the argument <code>--port</code> in case you need to bind to any other port instead of the default one.
 
 ## The code
 
