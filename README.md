@@ -30,7 +30,5 @@ const port = process.env.PORT || 8080; // set our port
 The structure goes like this: 
 
 * ```app``` is the main folder, which will contain the whole application. Inside of it, one may find the two parts of the application.
-
-** ```app/repository``` has every connection to the database. It uses the mongojs lib and each file will contain queries related to a specific entity (for instance, companies has queries related to it, etc).
-
-** ```app/router``` has every route and control of the route. As I said before... there is project pattern with pretty controllers around and etcera. You just define the route importing route from express and voilá. Do not forget to add it to <code>app/router/index</code> later!
+  * ```app/repository``` has every connection to the database. It uses the mongojs lib and each file will contain queries related to a specific entity (for instance, companies has queries related to it, etc).
+  * ```app/router``` has every route and control of the route. As I said before... there is project pattern with pretty controllers around and etcera. You just define the route importing route from express and voilá. Do not forget to add it to <code>app/router/index</code> later!
