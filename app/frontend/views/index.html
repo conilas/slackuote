@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <script src="/scripts/dom_handlers.js" type="text/javascript"></script>
+    <script src="/scripts/screen.js" type="text/javascript"></script>
+    <script src="/scripts/main.js" type="text/javascript"></script>
+    <script src="/scripts/handlers.js" type="text/javascript"></script>
+    <script src="/scripts/templates.js" type="text/javascript"></script>
+    <script src="/scripts/quote_controller.js" type="text/javascript"></script>
+    <script src="/scripts/requests.js" type="text/javascript"></script>
+    <script src="/scripts/actions.js" type="text/javascript"></script>
+    <link href="/style/panel.css"  type="text/css" rel="stylesheet">
+    <link href="/style/bulma.min.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <body onload="init()">
+    <div class="gradient" />
+    <div style="display: block" class="logo-div">
+      <img class="logo-holder" src="/public/images/index.png"/>
+    </div>
+
+    <div class="quotation-mark-container">
+        <div class="pure-u-1-6">
+          <img class="quotation-mark" src="/public/images/quotation-mark.png"/>
+        </div>
+        <div class="main-quotation pure-u-4-5">
+          <p id="main-quote"></p>
+        </div>
+
+    </div>
+
+    <div class="selectors-container">
+      <div class="pure-button-group" role="group" aria-label="...">
+        <button id="all" class="pure-button  pure-button-active classification-button" onclick="actions.changeFilter('likes')">Likes</button>
+        <button id="populars" class="pure-button classification-button" onclick="actions.changeFilter('date')">Fresher :-)</button>
+      </div>
+    </div>
+
+    <div class="all-cards">
+
+    </div>
+
+  </body>
+
+  <footer>
+    .
+  </footer>
+</html>

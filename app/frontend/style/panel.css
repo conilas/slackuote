@@ -1,0 +1,237 @@
+body, footer{
+  background-color: #35383c;
+  padding: 0px;
+  margin: 0px;
+}
+
+@media (max-device-width: 800px) {
+
+    .main-quotation { display: none }
+    .quotation-mark { display: none }
+    .quotation-mark-container { display: none }
+    .pure-button-group { display: none }
+
+    .logo-holder {
+      width: 80px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card-container {
+      flex: 300px;
+      margin: 30px;
+    }
+
+    .card-container .card {
+      max-width: 400px;
+      border-radius: 10px;
+      height: 450px;
+      background: #e8e8e9;
+      margin: 0 auto;
+    }
+
+    .profile-pic {
+      height: 30px;
+      vertical-align:middle;
+    }
+
+
+    .own-card-content-likes {
+      margin: 0 auto;
+      max-width: 300px;
+      margin-left: 30px;
+      position: absolute;
+      bottom: 30px;
+    }
+
+
+    #secondary { width:30%; margin-left:3%;}
+
+}
+
+/* Tabled Portrait */
+
+@media (min-device-width: 801px) {
+
+
+  .card-container .card {
+    /* position: relative; */
+    /* width: 100%; */
+    max-width: 500px;
+    border-radius: 10px;
+    height: 450px;
+    background: #e8e8e9;
+  }
+  .ow {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .own-card-content-likes {
+    margin: 0 auto;
+    max-width: 300px;
+    margin-left: 30px;
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .logo-holder {
+    width: 80px;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+  .card__one {
+    transition: transform .10s;
+  }
+  .card__one::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+    content: '';
+    opacity: 0;
+    z-index: -1;
+  }
+  .card__one:hover, .card__one:focus {
+    transform: scale3d(1.006, 1.006, 1);
+  }
+  .card__one:hover::after, .card__one:focus::after {
+    opacity: 1;
+  }
+
+  .all-cards {
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .cards-line {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+  }
+
+  .quotation-mark-container {
+    height: 90px;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+  }
+
+  .selectors-container {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+  }
+
+  .main-quotation  {
+    margin-left: 30px;
+    font-size: 30px;
+    max-width: 900px;
+    word-break: break-word;
+    color: #abaeb6;
+  }
+
+  .quotation-mark {
+    width: 60px;
+    height: 60px;
+  }
+
+  .classification-button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .profile-pic {
+    height: 30px;
+    vertical-align:middle;
+  }
+
+  .card-container .card {
+    /* position: relative; */
+    /* width: 100%; */
+    max-width: 500px;
+    border-radius: 10px;
+    height: 450px;
+    background: #e8e8e9;
+  }
+
+  .card-container {
+    flex: 300px;
+    margin: 30px;
+  }
+
+
+}
+
+
+  .classification-button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .mainbody,
+  .header,
+  .footer {
+      padding: 5px;
+  }
+  .mainbody {
+      margin-top: 0;
+      min-height: 150px;
+      max-height: 300px;
+      overflow: auto;
+  }
+  .header {
+      height: 40px;
+      border-bottom: 1px solid #EEE;
+      background-color: #ffffff;
+      height: 40px;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+  }
+  .footer {
+      height: 40px;
+      background-color: whiteSmoke;
+      border-top: 1px solid #DDD;
+      -webkit-border-bottom-left-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      -moz-border-radius-bottomleft: 5px;
+      -moz-border-radius-bottomright: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+  }
+
+  .ow {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  .own-card-text {
+    margin: 0 auto;
+    max-width: 300px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .own-card-content {
+    margin: 0 auto;
+    max-width: 300px;
+    margin-top: 25px;
+    color: #7448ff;
+    font-weight: bold;
+  }
+  .own-card-content-author {
+    margin: 0 auto;
+    max-width: 300px;
+    margin-left: 30px;
+    position: absolute;
+    bottom: 30px;
+  }
