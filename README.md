@@ -25,10 +25,27 @@ If you need to make changes to the binded IP of the server (although it binds cu
 const port = process.env.PORT || 8080; // set our port
 ```
 
+## The stack
+
+The idea was simple: a frontend page, created using vanilla js, a backend REST service with some HTTP requests that was created using express and a database - MongoDB. A common ```MExN``` stack. The only different thing is the websocket handler that bring the real-time feeling to the app :-)
+
 ## The code
 
 The structure goes like this: 
 
 * ```app``` is the main folder, which will contain the whole application. Inside of it, one may find the two parts of the application.
-  * ```app/repository``` has every connection to the database. It uses the mongojs lib and each file will contain queries related to a specific entity (for instance, companies has queries related to it, etc).
-  * ```app/router``` has every route and control of the route. As I said before... there is project pattern with pretty controllers around and etcera. You just define the route importing route from express and voilá. Do not forget to add it to <code>app/router/index</code> later!
+
+### Backend 
+
+* The backend is a simple REST api (actually, two HTTP requests) with a websocket for real-time control. The websocket is triggered by the events-handler of the nodejs whenever a quote comes in action. The rest of folders are documented below.
+  * ```app/repository``` has every connection/query to the database. It uses the mongojs lib and each file will contain queries related to a specific entity (for instance, quotes, which is the only entity of this app, lol!).
+  * ```app/router``` has every route and control of the route. In this application's case, we only have the quote route and the static serving of the ```index.html```.
+  * ```app/helper``` has every route and control of the route. In this application's case, we only have the quote route and the static serving of the ```index.html```.
+  
+### Frontend
+
+* The frontend written in vanilla-js and uses Bulma as a CSS lib. It *must* be run in a browser that supports ES6+ syntax, because no Babel was configured. It uses IIFE to create namespaces with closures. The libs are directly included in the ```index.html``` file - sorry, did not have enough time to organize that part!
+  * ```app/frontend/public``` has all the assets of the front page (images and such).
+  * ```app/frontend/scripts``` contains all the javascript files used to handle interactions, etc.
+  * ```app/frontend/style``` contains the css files (one of which is bulma's file).
+  * ```app/frontend/views``` contains the html files (there is only index.html, lol).
